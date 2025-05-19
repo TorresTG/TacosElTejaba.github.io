@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Tejaban - Auténticos Tacos Mexicanos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --rojo-mexicano: #CD2E27;
+            --verde-mexicano: #006847;
+            --amarillo-mexicano: #FFD100;
+        }
+
+        body {
+            background-color: #f4e5c2;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url("images/chipotle-mushroom-tacos.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .titulo-principal {
+            font-family: 'Cinzel Decorative', cursive;
+            color: var(--amarillo-mexicano);
+            font-size: 4rem;
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+        }
+
+        .card-taco {
+            border: 3px solid var(--rojo-mexicano);
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .card-taco:hover {
+            transform: translateY(-10px);
+        }
+
+        .btn-mexicano {
+            background: var(--rojo-mexicano);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .btn-mexicano:hover {
+            background: var(--verde-mexicano);
+            color: var(--amarillo-mexicano);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .direccion {
+            border-left: 5px solid var(--rojo-mexicano);
+            padding-left: 1rem;
+        }
+
+        .horario {
+            background: var(--verde-mexicano);
+            color: white;
+            padding: 1rem;
+            border-radius: 15px;
+        }
+        
+        .badge-reapertura {
+            background: var(--verde-mexicano);
+            color: white;
+            font-size: 1rem;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            transform: rotate(3deg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero text-center">
+        <span class="badge badge-reapertura">Reapertura exitosa - ¡Gracias a todos!</span>
+        <div>
+            <h1 class="titulo-principal">El Tejaban</h1>
+            <h3 class="text-white mb-4">Tradición taquera </h3>
+            <a href="#ubicacion" class="btn btn-mexicano">¡Ven a probarnos!</a>
+        </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <h2 class="text-verde-mexicano mb-3">Nuestra Especialidad</h2>
+                <div class="card card-taco mb-3">
+                    <div class="card-body">
+                        <h4>Taco al Pastor 🌮</h4>
+                        <p>Carne marinada con especias, piña y cebolla</p>
+                        <span class="text-rojo-mexicano font-weight-bold">$22 c/u</span>
+                    </div>
+                </div>
+                <div class="card card-taco mb-3">
+                    <div class="card-body">
+                        <h4>Taco de Suadero 🥩</h4>
+                        <p>Carne de res cocida a fuego lento</p>
+                        <span class="text-rojo-mexicano font-weight-bold">$25 c/u</span>
+                    </div>
+                </div>
+                <div class="card card-taco mb-3">
+                    <div class="card-body">
+                        <h4>Taco de Carnitas 🐖</h4>
+                        <p>Deliciosa carne de cerdo dorada</p>
+                        <span class="text-rojo-mexicano font-weight-bold">$24 c/u</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="horario mb-4">
+                    <h4>Horario de atención</h4>
+                    <p>Lunes a Domingo: 12:00 PM - 10:00 PM</p>
+                    <small>¡Servicio continuo!</small>
+                </div>
+
+                <div id="ubicacion" class="mb-4">
+                    <h4>Encuéntranos</h4>
+                    <p class="direccion">
+                        And. Mina de Barroterán 23, Alamedas<br>
+                        27110 Torreón, Coah.
+                    </p>
+                    <div class="mapa mt-3">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1ddtdireccionreal" 
+                                width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-rojo-mexicano text-white py-4">
+        <div class="container text-center">
+            <h4>Contacto directo</h4>
+            <div class="my-3">
+                <a href="tel:+528716764502" class="btn btn-mexicano">
+                    <i class="fas fa-phone-alt"></i> +52 871 676 4502
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('a[href^="#"]').on('click', function(event) {
+                event.preventDefault();
+                const target = $(this.getAttribute('href'));
+                if (target.length) {
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 70
+                    }, 1000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
